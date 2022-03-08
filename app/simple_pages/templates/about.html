@@ -1,7 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
     About Me
-    <div>
-        <h1>Colton Johnson</h1>
+    <div class="heading darkgrey">
+        <h1 class="font-bg code-snippet">Colton Johnson</h1>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">Background</h1>
+            <p>
+                I graduated from NJIT with a degree in Computer Science. I am currently pursuing a degree in
+                cybersecurity and privacy at NJIT as well. I am a 2x captain of the division 1 lacrosse team
+                at NJIT as well. Some of my hobbies include cycling, Bonsai trees, running, snowboarding, and programming!
+            </p>
+        </div>
+
+        <div class="side-content">
+            <h2>Nav Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="{{ url_for('simple_pages.show', page="page1")}}">GIT</a></li>
+                <li class="list-group-item"><a href="{{ url_for('simple_pages.show', page="page2")}}">Docker</a></li>
+                <li class="list-group-item"><a href="{{ url_for('simple_pages.show', page="page3")}}">Python/Flask</a></li>
+                <li class="list-group-item"><a href="{{ url_for('simple_pages.show', page="page4")}}">CI/CD</a></li>
+            </ul>
+        </div>
     </div>
 {% endblock %}
