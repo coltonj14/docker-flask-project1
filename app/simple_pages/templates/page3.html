@@ -8,4 +8,185 @@
     <div class="progress">
         <div class="progress-bar bg-success" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">Testing with Pytest</h1>
+            <p>
+                Testing with pylint and furthermore testing in general is very important for a project. These tests
+                actually assert that what you have coded in on the page when it is loaded. In combination with
+                continuous integration and deployment testing is a great way to catch bugs and just make sure
+                everything you need is on the page and working correctly. In the code I am using pytest to create
+                assertions for element on my page. Whether this be items in the nav bar or actual words, buttons, or
+                content on the page itself. Below is an example of what one of these assertions looks like:
+            </p>
+            <span class="code-snippet">
+                response = client.get("/")<br>
+            </span>
+            <span class="code-snippet">
+                assert response.status_code == 200<br>
+            </span>
+            <span class="code-snippet">
+                assert b'&lt;a class="nav-link" href="/about">About</a>' in response.data <br>
+            </span>
+            <hr class="dashed">
+
+            <h1 class="font-md">Project Files</h1>
+            <h1>docker_flask_project1 <- root of the project</h1>
+            <ul>
+                <li>
+                    .github directory <- directory to work with github actions
+                    <ul>
+                        <li>
+                            workflows <- directory that houses the CI/CD files
+                            <ul>
+                                <li>
+                                    dev.yml <- activates on pull request and runs pytests as well as deploys to heroku
+                                    development app
+                                </li>
+                                <li>
+                                    prod.yml <- activates on a marge or push to main and runs pytests, deploys to heroku
+                                    production app,
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    app directory <- houses the main files of the application
+                    <ul>
+                        <li>
+                            context_processors <- Gets values that will be used in the rest of the project
+                            <ul>
+                                <li>
+                                    __init__.py <- gets information that can be used in the rest of the application by reference
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            simple pages <- the directory of the pages of the application
+                            <ul>
+                                <li>
+                                    about.html <- html for the about page
+                                </li>
+                                <li>
+                                    index.html <- html for the home page
+                                </li>
+                                <li>
+                                    page1.html <- html for page 1 - git
+                                </li>
+                                <li>
+                                    page2.html <- html for page 2 - docker
+                                </li>
+                                <li>
+                                    page3.html <-html for page 3 - python/flask
+                                </li>
+                                <li>
+                                    page4.html <-html for page 4 - CI/CD
+                                </li>
+                                <li>
+                                    __init__.py <- starting of flask
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            static
+                            <ul>
+                                <li>
+                                    css <- houses the css file for project
+                                    <ul>
+                                        <li>
+                                            style.css <- file for webpage styling
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    images <- directory of the images used in the project
+                                </li>
+                                <li>
+                                    js <- houses javascript files
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            templates
+                            <ul>
+                                <li>
+                                    base.html <- provides the base layout for all of the pages
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            __init__.py <- starting flask instance
+                        </li>
+                        <li>
+                            run.py <- creates the app
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    tests directory
+                    <ul>
+                        <li>
+                            conftest.py <- tests the configuration of the app
+                        </li>
+                        <li>
+                            context_process_test.py <- tests the context process values that we calculated
+                        </li>
+                        <li>
+                            simple_pages_test.py <- test and creates assertions for each of the webpages
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    rest of files
+                    <ul>
+                        <li>
+                            .coveragerc <- control coverage.py
+                        </li>
+                        <li>
+                            .dockerignore <- files docker should ignore
+                        </li>
+                        <li>
+                            .gitignore <- files git should ignore
+                        </li>
+                        <li>
+                            .pylintrc <- outline pylint rules
+                        </li>
+                        <li>
+                            docker-compose.yml <- Orchestration file that contains the configuration to develop locally, it
+                            overrides the Dockerfile to run the flask development server instead of running the gunicorn server
+                            that is used for hosting on Heroku
+                        </li>
+                        <li>
+                            Dockerfile <- File used to create an image to run in a container that runs the program
+                        </li>
+                        <li>
+                            heroku.yml <- gives necessary commands/information to heroku in order to run application
+                        </li>
+                        <li>
+                            pytest.ini <- pytest configuration
+                        </li>
+                        <li>
+                            readme.md <- Instructions for project
+                        </li>
+                        <li>
+                            requirements.txt <- list of dependencies for the project need to install these before running
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="side-content">
+            <h2>Python/Flask Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/">Flask Blueprint Docs</a></li>
+                <li class="list-group-item"><a href="https://flask.palletsprojects.com/en/2.0.x/testing/">Flask test with pytest</a></li>
+                <li class="list-group-item"><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a></li>
+                <li class="list-group-item"><a href="https://github.com/coltonj14/docker-flask-project1">Project on Github</a></li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}
