@@ -51,3 +51,25 @@ hr.dashed {
     font-size: 40px;
 }
 
+.heading {
+    height: 300px;
+}
+
+.font-bg {
+    font-size: 100px;
+}
+
+.font-md{
+    font-size: 50px;
+}
+
+.content-container{
+    width: 75%
+}
+
+.code-snippet{
+    font-style: italic;
+    font-weight: bold;
+}
+
+
