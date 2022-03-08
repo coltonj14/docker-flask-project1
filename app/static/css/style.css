@@ -1,3 +1,53 @@
 body {
 font-size: 200%;
 }
+
+.container{
+    width: 100%;
+}
+
+.carousel-container{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.nomargin{
+    margin: 0 auto;
+}
+
+.carousel{
+    width: 75%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+hr.dashed {
+  border-top: 3px dashed #bbb;
+}
+
+.half{
+    width: 33%;
+}
+.darkgrey {
+    background-color: dimgrey;
+}
+
+.lightgrey {
+    background-color: lightgrey;
+}
+
+.navy {
+    background-color: navy;
+}
+.red {
+    background-color: crimson;
+}
+.text-white{
+    color: white;
+}
+.btn-lg{
+    width: 33%;
+    height: 33%;
+    font-size: 40px;
+}
+

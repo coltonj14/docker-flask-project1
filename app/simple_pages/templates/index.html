@@ -1,4 +1,79 @@
 {% extends "base.html" %}
 {% block content %}
-    Index Page
+    <h1>Index Page</h1>
+    <div class="carousel-container darkgrey">
+            <div class="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+               <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+               </div>
+               <div class="carousel-inner">
+                   <div class="carousel-item active">
+                       <a href="{{ url_for('simple_pages.show', page="page1")}}">
+                           <img src="../static/images/git.png" class="d-block w-100" alt="git">
+                       </a>
+                   </div>
+                   <div class="carousel-item">
+                       <a href="{{ url_for('simple_pages.show', page="page2")}}">
+                           <img src="../static/images/docker.png" class="d-block w-100" alt="docker">
+                       </a>
+                   </div>
+                   <div class="carousel-item">
+                       <a href="{{ url_for('simple_pages.show', page="page3")}}">
+                          <img src="../static/images/python.jpg" class="d-block w-100" alt="python-flask]">
+                       </a>
+                   </div>
+                   <div class="carousel-item">
+                       <a href="{{ url_for('simple_pages.show', page="page4")}}">
+                           <img src="../static/images/cicd.png" class="d-block w-100" alt="CI/CD">
+                       </a>
+                   </div>
+               </div>
+               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+               </button>
+               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                 <span class="visually-hidden">Next</span>
+               </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="carousel-container">
+        <div class="row">
+            <div class="col lightgrey ">
+                About me
+                <hr class="dashed">
+                <p>
+                    My name is Colton Johnson and I am a second semester masters student at NJIT.
+                    I got my undergraduate degree in Computer Science and I am currently pursuing
+                    my masters degree in Cyber Security and Privacy!
+                </p>
+
+            </div>
+            <div class="col lightgrey ">
+                Technologies
+                <hr class="dashed">
+                <p>
+                    Some of the technologies that I am learning include Git, Docker, Python/Flask, and
+                    I am also learning the ins and outs of continuous integration/deployment.
+                </p>
+            </div>
+            <div class="col lightgrey">
+                Get Started!
+                <hr class="dashed">
+                Feel free to click the carousel to start at a partiular technology or this button to get started with GIT.
+                <br>
+                <a class="btn btn-primary btn-lg" href="{{ url_for('simple_pages.show', page="page1")}}" role="button">GIT</a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
+
