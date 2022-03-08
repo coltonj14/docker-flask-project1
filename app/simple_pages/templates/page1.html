@@ -10,64 +10,77 @@
     </div>
 
     <div class="content-container">
-        <div>
-            <h1 class="font-md">Commits</h1>
-            <p>
-                With Git, in order to move your local code to Github you first need to be able to have a local repository.
-                You can use the command <span class="code-snippet">git add .</span> to have git track all of the changes you made to your files
-                locally. The next step is to commit your changes. You can think of a commit as a saved state of your code in
-                your local repository. You use commits to then push your code to github. This allows you to review your code
-                at a more specific level, where you can see changes that were made to the project on a commit by commit basis.
-                You can commit your local repository by using the command <span class="code-snippet">git commit -m "message about commit"</span>.
-            </p>
+        <div class="content">
+            <div>
+                <h1 class="font-md">Commits</h1>
+                <p>
+                    With Git, in order to move your local code to Github you first need to be able to have a local repository.
+                    You can use the command <span class="code-snippet">git add .</span> to have git track all of the changes you made to your files
+                    locally. The next step is to commit your changes. You can think of a commit as a saved state of your code in
+                    your local repository. You use commits to then push your code to github. This allows you to review your code
+                    at a more specific level, where you can see changes that were made to the project on a commit by commit basis.
+                    You can commit your local repository by using the command <span class="code-snippet">git commit -m "message about commit"</span>.
+                </p>
 
-        </div>
-        <hr class="dashed">
-        <div>
-            <h1 class="font-md">Merging</h1>
-            <p>
-                Merging with Git is a great way to integrate teamwork on a project. Merging gives you the ability to
-                bring together two versions of your code. You can check all of the changes you have made to your code
-                and how they compare. This allows multiple aspects of the project to come together to form one final
-                product or to add features to an existing code base.
-            </p>
+            </div>
+            <hr class="dashed">
+            <div>
+                <h1 class="font-md">Merging</h1>
+                <p>
+                    Merging with Git is a great way to integrate teamwork on a project. Merging gives you the ability to
+                    bring together two versions of your code. You can check all of the changes you have made to your code
+                    and how they compare. This allows multiple aspects of the project to come together to form one final
+                    product or to add features to an existing code base.
+                </p>
 
-        </div>
-        <hr class="dashed">
-        <div>
-            <h1 class="font-md">Branching</h1>
-            <p>
-                Branching in Git allows you to work on features of a code base or project separate from the main
-                branch. Typically, your production code base should be kept on the main branch and current work should
-                be done on branches and then merged into the main branch. Branching also allows you to test your code
-                without altering the project itself on the main branch. You can create a branch with the command
-                <span class="code-snippet">git branch branchname</span> and you can then move to that branch with the
-                command <span class="code-snippet">git checkout branchname</span>.
-            </p>
+            </div>
+            <hr class="dashed">
+            <div>
+                <h1 class="font-md">Branching</h1>
+                <p>
+                    Branching in Git allows you to work on features of a code base or project separate from the main
+                    branch. Typically, your production code base should be kept on the main branch and current work should
+                    be done on branches and then merged into the main branch. Branching also allows you to test your code
+                    without altering the project itself on the main branch. You can create a branch with the command
+                    <span class="code-snippet">git branch branchname</span> and you can then move to that branch with the
+                    command <span class="code-snippet">git checkout branchname</span>.
+                </p>
 
-        </div>
-        <hr class="dashed">
-        <div>
-            <h1 class="font-md">Tags</h1>
-            <p>
-                Git tagging allows you to essentially provide versions of your code. For example using a command like
-                <span class="code-snippet">git tag -a v1.4</span>. Git supports two types of tags: Lightweight and Annotated.
-            </p>
+            </div>
+            <hr class="dashed">
+            <div>
+                <h1 class="font-md">Tags</h1>
+                <p>
+                    Git tagging allows you to essentially provide versions of your code. For example using a command like
+                    <span class="code-snippet">git tag -a v1.4</span>. Git supports two types of tags: Lightweight and Annotated.
+                </p>
+            </div>
+
+            <hr class="dashed">
+            <div>
+                <h1 class="font-md">Repositories</h1>
+                <p>
+                    Repositories are the main aspect of Git and they are essentially a place where you can store a code base.
+                    As we saw you can have local repositories that store your code locally on your computer and you can have
+                    your repositories on <a href="https://github.com/">github.com</a>. This is where all of your code will be
+                    and gives you a chance to reference and see actions that can be done with your repository.
+
+                </p>
+            </div>
         </div>
 
-        <hr class="dashed">
-        <div>
-            <h1 class="font-md">Repositories</h1>
-            <p>
-                Repositories are the main aspect of Git and they are essentially a place where you can store a code base.
-                As we saw you can have local repositories that store your code locally on your computer and you can have
-                your repositories on <a href="https://github.com/">github.com</a>. This is where all of your code will be
-                and gives you a chance to reference and see actions that can be done with your repository.
-
-            </p>
+        <div class="side-content">
+            <h2>Github Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://github.com/coltonj14/docker-flask-project1">Project 1 github repo</a></li>
+                <li class="list-group-item"><a href="https://github.com/">Github</a></li>
+                <li class="list-group-item"><a href="https://docs.github.com/en">Github Docs</a></li>
+                <li class="list-group-item"><a href="https://git-scm.com/doc">Git Docs</a></li>
+            </ul>
         </div>
+
     </div>
 
-    <div
+
 
 {% endblock %}

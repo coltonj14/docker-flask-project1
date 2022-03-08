@@ -64,7 +64,18 @@ hr.dashed {
 }
 
 .content-container{
-    width: 75%
+    width: 100%
+}
+.content{
+    width: 75%;
+    float: left;
+    text-align: left;
+}
+
+.side-content{
+    width: 25%;
+    float: left;
+    text-align: left;
 }
 
 .code-snippet{

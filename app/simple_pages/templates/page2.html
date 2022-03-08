@@ -8,4 +8,82 @@
     <div class="progress">
         <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">Docker</h1>
+            <p>Docker provides applications with a container to package up and run in. This is an isolated environment
+                that is called a container. This is great as everything you need is in the container regardless of what
+                computer you are using.
+            </p>
+            <hr class="dashed">
+            <h1 class="font-md">Images</h1>
+            <p>
+                An image is an isolated filesystem that runs in the container. It also houses everything needed to run the
+                container including environment variables and dependencies.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Docker commands</h1>
+            <ul>
+                <li>
+                    docker run - This command allows you to start up a container using a specified image. It usually
+                    will come in the form <span class="code-snippet">docker run -dp port:port {image-name}</span>
+                </li>
+                <li>
+                    docker build - This command will build your container based on some variable sin your Dockerfile.
+                    your Dockerfile can contain some setup variables that will help to install dependencies that are
+                    needed.
+                </li>
+                <li>
+                    docker ps - <span class="code-snippet">docker ps</span> will allows you to see the running docker
+                    containers. From this command you can also get information about your running containers. This
+                    information can include container IDs.
+                </li>
+                <li>
+                    docker stop - stop a container from running
+                </li>
+                <li>
+                    docker rm {container id} - This command allows you to remove a particular container. You can also
+                    do this from the docker desktop application
+                </li>
+                <li>
+                    docker push - push your container to dockerhub using this command in pair with your repository name
+                </li>
+                <li>
+                    docker tag - This command allows you to add a tag to your image to give it a new name
+                </li>
+                <li>
+                    docker network - allows container to be on the same "network" which in turn allows them to communicate
+                    with eachother
+                </li>
+                <li>
+                    docker exec -it - allows you to access a terminal inside of the container
+                </li>
+            </ul>
+
+            <hr class="dashed">
+            <h1 class="font-md">Starting the Project</h1>
+            <p>
+                In order to start the project in your IDE using the command line you will use the command
+                <span class="code-snippet">docker compose up --build</span> In order to access the container from the
+                terminal you can use the command <span class="code-snippet">docker ps</span> in order to get the container
+                name. Then use the command <span class="code-snippet">docker exec -it {container name} /bin/bash</span> to
+                access a terminal in the container.
+            </p>
+        </div>
+
+        <div class="side-content">
+            <h2>Docker Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://hub.docker.com/repository/docker/cj236/project1">Project DockerHub</a></li>
+                <li class="list-group-item"><a href="https://www.docker.com/">Docker.com</a></li>
+                <li class="list-group-item"><a href="https://docs.docker.com/get-started/overview/">Docker Docs</a></li>
+                <li class="list-group-item">A fourth item</li>
+                <li class="list-group-item">And a fifth one</li>
+            </ul>
+
+
+        </div>
+    </div>
 {% endblock %}
