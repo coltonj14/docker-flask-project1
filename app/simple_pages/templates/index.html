@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Index Page</h1>
-    <div class="carousel-container">
+    <div class="carousel-container darkgrey">
             <div class="carousel">
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                <div class="carousel-indicators">
@@ -45,15 +45,35 @@
 
     </div>
 
-    <div>
-        <p>
-            My name is Colton Johnson and I am a second semester masters student at NJIT.
-            I got my undergraduate degree in Computer Science and I am currently pursuing
-            my masters degree in Cyber Security and Privacy!
-        </p>
-        <p>
-            Here are some of the technologies I am using in IS601: Git, Docker, Python/flask, and CI/CD
-        </p>
+    <div class="carousel-container">
+        <div class="row">
+            <div class="col lightgrey ">
+                About me
+                <hr class="dashed">
+                <p>
+                    My name is Colton Johnson and I am a second semester masters student at NJIT.
+                    I got my undergraduate degree in Computer Science and I am currently pursuing
+                    my masters degree in Cyber Security and Privacy!
+                </p>
+
+            </div>
+            <div class="col lightgrey ">
+                Technologies
+                <hr class="dashed">
+                <p>
+                    Some of the technologies that I am learning include Git, Docker, Python/Flask, and
+                    I am also learning the ins and outs of continuous integration/deployment.
+                </p>
+            </div>
+            <div class="col lightgrey">
+                Get Started!
+                <hr class="dashed">
+                Feel free to click the carousel to start at a partiular technology or this button to get started with GIT.
+                <br>
+                <a class="btn btn-primary btn-lg" href="{{ url_for('simple_pages.show', page="page1")}}" role="button">GIT</a>
+            </div>
+        </div>
     </div>
+
 {% endblock %}
 
