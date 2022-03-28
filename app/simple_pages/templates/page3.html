@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 3
+
     <div class="heading darkgrey">
         <h1 class="font-bg code-snippet">Python/Flask</h1>
         <img src="../static/images/python.jpg" alt="GIT" >
@@ -180,6 +180,14 @@
         </div>
 
         <div class="side-content">
+
+            <div>
+                <img class="sideimg" src="../static/images/page-images/python-hw.png" alt=""/>
+                <br>
+                <img class="sideimg" src="../static/images/page-images/flask-inner.jpg" alt=""/>
+                <br>
+            </div>
+
             <h2>Python/Flask Links</h2>
             <ul class="list-group">
                 <li class="list-group-item"><a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/">Flask Blueprint Docs</a></li>
@@ -187,7 +195,7 @@
                 <li class="list-group-item"><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask</a></li>
                 <li class="list-group-item"><a href="https://github.com/coltonj14/docker-flask-project1">Project on Github</a></li>
             </ul>
-            <a class="btn btn-primary btn-lg" href="{{ url_for('simple_pages.show', page="page4")}}" role="button">CI/CD</a>
+
         </div>
     </div>
 {% endblock %}

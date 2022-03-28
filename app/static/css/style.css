@@ -2,6 +2,11 @@ body {
 font-size: 200%;
 }
 
+footer {
+    width: 75%;
+}
+
+
 .container{
     width: 100%;
 }
@@ -46,8 +51,8 @@ hr.dashed {
     color: white;
 }
 .btn-lg{
-    width: 33%;
-    height: 33%;
+    width: 20%;
+    height: 25%;
     font-size: 40px;
 }
 
@@ -82,5 +87,11 @@ hr.dashed {
     font-style: italic;
     font-weight: bold;
 }
+
+.sideimg {
+    width: 100%;
+    display: block;
+}
+
 
 

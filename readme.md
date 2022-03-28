@@ -9,7 +9,7 @@
 
 * [Developmental Deployment](https://cj236-project1-development.herokuapp.com/)
 
-## Project 1 
+## Project 1+2 
 Colton Johnson
 
 ## Running Locally
