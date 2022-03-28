@@ -28,3 +28,12 @@ class Multiplication:
     def multiply(value_1, value_2):
         """ This is the add method"""
         return value_1 * value_2
+
+class Division:
+    """This is the division class"""
+
+    @staticmethod
+    def divide(value_1, value_2):
+        """This is the division method"""
+        #potentially check for divide by 0 here
+        return value_1 / value_2

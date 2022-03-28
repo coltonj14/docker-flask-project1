@@ -2,29 +2,112 @@
 {% block content %}
 
     <div class="heading darkgrey">
-        <h1 class="font-bg code-snippet">CI/CD</h1>
+        <h1 class="font-bg code-snippet">OOP</h1>
         <img src="../static/images/cicd.png" alt="GIT" >
     </div>
     <div class="progress">
-        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        <div class="progress-bar bg-success" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
 
     <div class="content-container">
         <div class="content">
-            <h1 class="font-md">Continous Integration and Deployment</h1>
+            <h1 class="font-md">OOP programming terms glossary</h1>
             <p>
-                For this project I have set up Github actions which allows me to run tests when merging and when creating
-                pull requests. For this I have set up my workflow files (dev.yml and prod.yml) with my information
-                from dockerhub, heroku, and Github. Through these .yml files and Github actions I am able to perform tests
-                and push to my development heroku application all before I merge my code with main. Once I confirm the merge
-                I have more Github actions that test on the merge and deploy to my production heroku application.
+                <ul>
+                    <li><h1>Instantiation</h1></li>
+                        Instantiation is essentially the creation of an object in OOP. When instantiating
+                        we are creating an "Instance" of that particular class. For example creating an
+                        instance of the Calculator class allows you to work with a Calculator object.
+                    <li><h1>Object</h1></li>
+                        An object is an instance of a class.
+                    <li><h1>Class</h1></li>
+                        A class is a blueprint for an object. It contains all the necessary data and
+                        methods to build and use an object.
+                    <li><h1>Namespace</h1></li>
+                        A namespace is a collection of the currently defined names as well as the information
+                        about the object that it references.
+                    <li><h1>Constructor</h1></li>
+                        A constructor is a special method in a class that has the same name as the class. This method
+                        is executed when the class is instantiated, often to set up the object. This setup can be for
+                        object properties or instance variables.
+                    <li><h1>Fixture</h1></li>
+                        Fixtures help in the arranging and some of the act phase in AAA testing. It helps to provide
+                        the clear steps and data that will be used in the test.
+                    <li><h1>Type hint</h1></li>
+                        Since some languages are dynamically typed type hinting is way to make it more static.
+                        For example, python is a dynamically typed language which essentially means that you
+                        do not have to declare the variable type. Using type hints in python can help to make tests
+                        very clear.
+                    <li><h1>Type cast</h1></li>
+                        Type casting is used when you want to change a variable to another type. For example, in python
+                        if you want to represent the string "123" as an integer you can type cast it like this
+                        <span class="new-code">int("123")</span>
+                    <li><h1>Unit test</h1></li>
+                        A unit test is a way for developer to test individual components of a software or application.
+                        This is to make sure that the code is working as intended.
+                    <li><h1>Static</h1></li>
+                        Static refers to a part of the class that belongs to the class whether it be a property or method.
+                    <li><h1>Instance method</h1></li>
+                        Instance method are the typical methods that you would see in a class that belong to the
+                        object instances of the class. Often times in an instance method will include <span class="new-code">self</span>
+                        in the parameters to refer to the instance of the object itself.
+                    <li><h1>Instance property</h1></li>
+                        A property that belongs to a particular object. Often times these are instantiated in the constructor.
+                    <li><h1>Static method</h1></li>
+                        Adding static identifier to a method in a class means that the method belongs to the class and
+                        not the object.
+                    <li><h1>Static property</h1></li>
+                        When a variable is declared inside the class but not in a method it is referred to as a
+                        static variable or property. This property can be used directly form the class but not directly
+                        by an instance of the class.
+                    <li><h1>Encapsulation</h1></li>
+                        One of the four main principles of OOP. Encapsulation is the idea that data and methods
+                        are "encapsulated" within a class. This helps to restrict access to data or methods within a
+                        class. An example of encapsulation is having private static variables that are accessable only
+                        by a getter method within the class.
+                    <li><h1>Inheritance</h1></li>
+                        One of the four main principles of OOP. Inheritance is the property that a class can inherit
+                        properties from another class. This helps to provide reusability of code as well as keep the
+                        code organized.
+                    <li><h1>Polymorphism</h1></li>
+                        One of the four main principles of OOP. Polymorphism boils down to being able to have the
+                        same signature with different method actions. For instance, in the operation class(which are
+                        subclasses of the Calculation class) have their own <span class="new-code">get_result()</span>
+                        method with a slightly different implementation.
+                    <li><h1>Abstraction</h1></li>
+                        One of the four main principles of OOP. Abstraction allows for classes and method to essentially
+                        act as a blueprint for the class. Abstract classes or methods provide the structure but not the
+                        implementation.
+                </ul>
             </p>
 
             <hr class="dashed">
-            <h1 class="font-md">Push to Docker</h1>
+            <h1 class="font-md">Overview of SOLID</h1>
+            <ul>
+                <li>
+                    S - Single-responsibility principle -> States that a class should only have one job.
+                </li>
+                <li>
+                    O - Open-close principle -> Objects should be open for extension but closed for modification.
+                </li>
+                <li>
+                    L - Liskov substitution principle -> Every subclass should be substitutable for their
+                    parent class.
+                </li>
+                <li>
+                    I - Interface segregation principle -> Should not be forced to depend on methods they don't use.
+                </li>
+                <li>
+                    D - Dependency inversion principle -> Entities must depend on abstraction.
+                </li>
+            </ul>
+
+
+            <hr class="dashed">
+            <h1 class="font-md">Design Patterns</h1>
             <p>
-                In order to push to my docker repository I have in my prod.yml file an action to log into docker and push to
-                the specific image that I have on dockerhub for my repository.
+                Design patterns are solutions to existing software design problems that provide a clear pattern for
+                implementation. There are three main design patterns and they are creational, behavioral, and structural.
             </p>
         </div>
 
@@ -35,12 +118,12 @@
 
             </div>
 
-            <h2>CI/CD Links</h2>
+            <h2>OOP Links</h2>
             <ul class="list-group">
-                <li class="list-group-item"><a href="https://www.heroku.com/">Heroku</a></li>
-                <li class="list-group-item"><a href="https://docs.github.com/en/actions">Github actions</a></li>
-                <li class="list-group-item"><a href="https://www.martinfowler.com/articles/continuousIntegration.html">Source 1 Martin Fowler</a></li>
-                <li class="list-group-item"><a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html">Source 2 Martin Fowler</a></li>
+                <li class="list-group-item"><a href="https://www.programiz.com/python-programming/object-oriented-programming">Python OOP</a></li>
+                <li class="list-group-item"><a href="https://blogs.msmvps.com/deborahk/object-oriented-programming-oop-terms/">OOP Terms</a></li>
+                <li class="list-group-item"><a href="https://docs.python.org/3/library/typing.html">Type Hinting</a></li>
+                <li class="list-group-item"><a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design">SOLID</a></li>
             </ul>
 
         </div>

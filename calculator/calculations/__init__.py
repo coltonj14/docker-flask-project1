@@ -1,5 +1,5 @@
 """Calculation and Addition, Multiplication, and Subtraction Classes """
-from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Mult
+from calculator.operations import Addition as Add, Subtraction as Sub, Multiplication as Mult, Division as Div
 
 
 class Calculation:
@@ -60,3 +60,13 @@ class Subtraction(Calculation):
         for value in self.values:
             difference_of_values = Sub.subtract(difference_of_values, value)
         return difference_of_values
+
+
+class Division(Calculation):
+    """division calculation object"""
+
+    def get_result(self):
+        result = 1.0
+        for value in self.values:
+            result = Div.divide(value, result)
+        return result
