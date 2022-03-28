@@ -56,6 +56,17 @@
                 code is written more concisely it helps to keep your functions or methods doing only one thing. This in the end,
                 makes it easier to test.
             </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">AAA in Python</h1>
+            <p>
+                With this specific calculator project, we have incorporated AAA testing. The arrange and act phase can be seen
+                through the code that preps the data for testing and provides the action. We call the <span class="new-code">create()</span>
+                method in the Calculations class to set up the data so that <span class="new-code">get_result()</span> can access the
+                instance variable that is created to test it. This is the implementation in the classes itself that makes it easier
+                to test. As for the actual test itself we create the tuple list and then call the create method on a particular
+                operation. We then <span class="new-code">assert</span> on this action.
+            </p>
         </div>
 
         <div class="side-content">
