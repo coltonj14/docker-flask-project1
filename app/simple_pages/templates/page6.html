@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="heading darkgrey">
+        <h1 class="font-bg code-snippet">AAA Testing</h1>
+        <img src="../static/images/cicd.png" alt="GIT" >
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">AAA</h1>
+            <p>
+                For this project I have set up Github actions which allows me to run tests when merging and when creating
+                pull requests. For this I have set up my workflow files (dev.yml and prod.yml) with my information
+                from dockerhub, heroku, and Github. Through these .yml files and Github actions I am able to perform tests
+                and push to my development heroku application all before I merge my code with main. Once I confirm the merge
+                I have more Github actions that test on the merge and deploy to my production heroku application.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Arrange</h1>
+            <p>
+                In order to push to my docker repository I have in my prod.yml file an action to log into docker and push to
+                the specific image that I have on dockerhub for my repository.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Action</h1>
+            <p>
+                In order to push to my docker repository I have in my prod.yml file an action to log into docker and push to
+                the specific image that I have on dockerhub for my repository.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Assert</h1>
+            <p>
+                In order to push to my docker repository I have in my prod.yml file an action to log into docker and push to
+                the specific image that I have on dockerhub for my repository.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Concise vs Verbose</h1>
+            <p>
+                When writing testing in the AAA style/format, it may be easier to understand if this process is
+                coded verbosely. This thought process can bring up issues though as it increases code size. When the
+                code is written more concisely it helps to keep your functions or methods doing only one thing. This in the end,
+                makes it easier to test.
+            </p>
+        </div>
+
+        <div class="side-content">
+            <div>
+                <img class="sideimg" src="../static/images/page-images/ci:cd-steps.jpg" alt=""/>
+                <br>
+
+            </div>
+
+            <h2>AAA Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://www.heroku.com/">Heroku</a></li>
+                <li class="list-group-item"><a href="https://docs.github.com/en/actions">Github actions</a></li>
+                <li class="list-group-item"><a href="https://www.martinfowler.com/articles/continuousIntegration.html">Source 1 Martin Fowler</a></li>
+                <li class="list-group-item"><a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html">Source 2 Martin Fowler</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+{% endblock %}

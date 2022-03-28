@@ -28,7 +28,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist" >
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
 
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
@@ -48,11 +48,20 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4")}}">CI/CD</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page5")}}">OOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page6")}}">AAA Testing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page7")}}">Calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page8")}}">SOLID</a>
+                            </li>
                         </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-                            <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">...</div>
-                        </div>
+
                     </div>
                 </div>
             </nav>
