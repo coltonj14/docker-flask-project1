@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 4
+
     <div class="heading darkgrey">
         <h1 class="font-bg code-snippet">CI/CD</h1>
         <img src="../static/images/cicd.png" alt="GIT" >
@@ -29,6 +29,12 @@
         </div>
 
         <div class="side-content">
+            <div>
+                <img class="sideimg" src="../static/images/page-images/ci:cd-steps.jpg" alt=""/>
+                <br>
+
+            </div>
+
             <h2>CI/CD Links</h2>
             <ul class="list-group">
                 <li class="list-group-item"><a href="https://www.heroku.com/">Heroku</a></li>
@@ -36,7 +42,7 @@
                 <li class="list-group-item"><a href="https://www.martinfowler.com/articles/continuousIntegration.html">Source 1 Martin Fowler</a></li>
                 <li class="list-group-item"><a href="https://www.martinfowler.com/bliki/ContinuousDelivery.html">Source 2 Martin Fowler</a></li>
             </ul>
-            <a class="btn btn-primary btn-lg" href="{{ url_for('simple_pages.show', page="index")}}" role="button">Home</a>
+
         </div>
 
     </div>

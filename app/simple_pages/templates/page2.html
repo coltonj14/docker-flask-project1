@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    Page 2
+
     <div class="heading darkgrey">
         <h1 class="font-bg code-snippet">Docker</h1>
         <img src="../static/images/docker.png" alt="GIT" >
@@ -74,13 +74,19 @@
         </div>
 
         <div class="side-content">
+            <div>
+                <img class="sideimg" src="../static/images/page-images/docker-resources.png" alt=""/>
+                <br>
+
+            </div>
+
             <h2>Docker Links</h2>
             <ul class="list-group">
                 <li class="list-group-item"><a href="https://hub.docker.com/repository/docker/cj236/project1">Project DockerHub</a></li>
                 <li class="list-group-item"><a href="https://www.docker.com/">Docker.com</a></li>
                 <li class="list-group-item"><a href="https://docs.docker.com/get-started/overview/">Docker Docs</a></li>
             </ul>
-            <a class="btn btn-primary btn-lg" href="{{ url_for('simple_pages.show', page="page3")}}" role="button">Python</a>
+
 
 
         </div>

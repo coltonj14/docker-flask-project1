@@ -28,12 +28,13 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" >
+
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
+                                <a class="nav-link " aria-current="page" href="{{ url_for('simple_pages.show', page="index")}}">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
+                                <a class="nav-link " aria-current="page" href="{{ url_for('simple_pages.show', page="about")}}">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1")}}">GIT</a>
@@ -48,6 +49,10 @@
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4")}}">CI/CD</a>
                             </li>
                         </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
+                            <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">...</div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -71,6 +76,16 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>
+    $(function(){
+        $('a').each(function(){
+            if ($(this).prop('href') == window.location.href) {
+                $(this).addClass('active'); $(this).parents('li').addClass('active');
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
