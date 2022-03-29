@@ -93,5 +93,12 @@ hr.dashed {
     display: block;
 }
 
+.new-code {
+    background-color: darkslategrey;
+    color: coral;
+    font-style: italic;
+    font-weight: bold;
+}
+
 
 

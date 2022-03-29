@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="heading darkgrey">
+        <h1 class="font-bg code-snippet">AAA Testing</h1>
+        <img src="../static/images/page-images/AAA-header.png" alt="AAA" >
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">AAA and Why Test?</h1>
+            <p>
+                AAA testing is a process or framework for testing code. It represents three parts A(Arrange) A(Act)
+                and A(Assert). These are the three parts that can ensure a good test. AAA is powerful because it
+                teaches the importance of a simple yet clear test. It also helps to separate your code into tests that
+                test one thing.Testing code is important in order to make sure that everything you are writing, code wise,
+                can be relied upon and is robust. Testing can also help to find where your code is failing or wether
+                it is producing the expected output or not.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Arrange</h1>
+            <p>
+                The first A is for Arranging that data in order to be tested. This should essentially set up the test
+                case. This section should handle everything from special setup to potentially pulling from a database.
+                An example of this from the calculator project would be setting up the numbers that we want to perform
+                operations on. This could be setting up the data structure or evem just making sure you have the correct
+                numbers to test with.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Act</h1>
+            <p>
+                Now it is time to Act. This portion is now acting on the data that we have set up in the arrange portion
+                of the testing framework. This could be doing something like calling a function or performing an operation
+                on the data. This step in our framework will supply our assertion.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Assert</h1>
+            <p>
+                Assertions are essentially testing whether the result from the act step will pass or fail. The act step,
+                as mentioned, should produce a response that can be asserted. This assertion will then indicate whether
+                the test has passed or failed. An example from the calculator is testign whether an operation on two
+                numbers produces the expected result.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Concise vs Verbose</h1>
+            <p>
+                When writing testing in the AAA style/format, it may be easier to understand if this process is
+                coded verbosely. This thought process can bring up issues though as it increases code size. When the
+                code is written more concisely it helps to keep your functions or methods doing only one thing. This in the end,
+                makes it easier to test.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">AAA in Python</h1>
+            <p>
+                With this specific calculator project, we have incorporated AAA testing. The arrange and act phase can be seen
+                through the code that preps the data for testing and provides the action. We call the <span class="new-code">create()</span>
+                method in the Calculations class to set up the data so that <span class="new-code">get_result()</span> can access the
+                instance variable that is created to test it. This is the implementation in the classes itself that makes it easier
+                to test. As for the actual test itself we create the tuple list and then call the create method on a particular
+                operation. We then <span class="new-code">assert</span> on this action.
+            </p>
+        </div>
+
+        <div class="side-content">
+            <div>
+                <img class="sideimg" src="../static/images/page-images/AAA.jpg" alt=""/>
+                <br>
+
+            </div>
+
+            <h2>AAA Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/">AAA</a></li>
+                <li class="list-group-item"><a href="https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80">Medium AAA</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+{% endblock %}

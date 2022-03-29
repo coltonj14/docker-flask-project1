@@ -46,7 +46,31 @@ def test_request_page4(client):
     assert response.status_code == 200
     assert b"Push to Docker" in response.data
 
-def test_request_page_not_found(client):
+def test_request_page5(client):
     """This makes the index page"""
     response = client.get("/page5")
+    assert response.status_code == 200
+    assert b"Object" in response.data
+
+def test_request_page6(client):
+    """This makes the index page"""
+    response = client.get("/page6")
+    assert response.status_code == 200
+    assert b"Act" in response.data
+
+def test_request_page7(client):
+    """This makes the index page"""
+    response = client.get("/page7")
+    assert response.status_code == 200
+    assert b"Polymorphism" in response.data
+
+def test_request_page8(client):
+    """This makes the index page"""
+    response = client.get("/page8")
+    assert response.status_code == 200
+    assert b"Factory" in response.data
+
+def test_request_page_not_found(client):
+    """This makes the index page"""
+    response = client.get("/page9")
     assert response.status_code == 404

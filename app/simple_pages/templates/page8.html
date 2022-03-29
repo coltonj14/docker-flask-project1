@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="heading darkgrey">
+        <h1 class="font-bg code-snippet">SOLID Design</h1>
+        <img src="../static/images/page-images/solid-header.jpg" alt="GIT" >
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">SOLID in the Calculator</h1>
+            <p>
+                The SOLID principles can be seen throughout the calculator design. The first principle,
+                Single-responsibility principle can be seen directly in the operations classes where the
+                only job of each class is to return the result of an operation between two values.<br>
+                <img src="../static/images/page-images/operations-class-S.png" alt="Factory Method" /> <br>
+                The next principle, open-close principle, can be seen in the fact that in the calculation class
+                each subclass has its own <span class="new-code"> get_result()</span> method. This is better so that
+                there is not one big method with if-else statments to figure out which operation we are trying to perform.
+                <br>
+                The Liskov substitution principle is satisfied through the subclasses of Calculation as they perform the
+                operations on the values and return the final sum.
+                <br>
+                The interface segregation principle is satisfied throughout
+                the design of the calculator as there are no methods that are not applicable to the problem at hand. Every method
+                in the classes is usable whether it be a subclass or parent class.
+                <br>
+                The final principle of Dependency Inversion can also be seen in the calculator implementation. This principle
+                is most evident with the Calculator class depending on the abstract methods in the Calculation class. This helps
+                to satisfy this principle as it is really the only place where it is applicable.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Design method - Factory Method</h1>
+            <p>
+                The Factory method of design can be seen in this calculator project. The factory method of design has a purpose
+                of returning back an instance of the class you are referring to.<br>
+                <img src="../static/images/page-images/factory-example.png" alt="Factory Method" /> <br>
+                Here we can see we are returning the instance of Multiplication class which is renamed to Mult.
+            </p>
+        </div>
+
+        <div class="side-content">
+            <div>
+                <img class="sideimg" src="../static/images/page-images/solid-side.jpg" alt=""/>
+                <br>
+
+            </div>
+
+            <h2>CI/CD Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design">
+                    SOLID principles</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+{% endblock %}

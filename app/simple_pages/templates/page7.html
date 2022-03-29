@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <div class="heading darkgrey">
+        <h1 class="font-bg code-snippet">Calculator</h1>
+        <img src="../static/images/page-images/calc-header.png" alt="GIT" >
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 84%" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1 class="font-md">Calculator OOP principles</h1>
+            <p>
+                In this section I will go over how the calculator portion of this project demonstrates the principles of
+                Object Oriented Design.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Encapsulation</h1>
+            <p>
+                With encapsulation we are focusing on the hiding of data by encapsulating it in the class. In the
+                Calculator implementation this can easily be seen in the Calculations class. We use the method
+                <span class="new-code">def get_result(self)</span> in order to access the instance variable list to
+                get the result of the calculation. This aspect of the project also demonstrates another priciple of
+                OOP, polymorphism.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Polymorphism</h1>
+            <p>
+                As stated about this example also demonstrates polymorphism. Each individual Calculation subclass
+                has its own <span class="new-code">def get_result(self)</span> method. For an illustration look at the
+                code for the addition and subtraction.
+                <ul>
+                    <li>
+                        Addition - <span class="new-code"> <br>
+                                        sum_of_values = 0.0 <br>
+                                        for value in self.values: <br>
+                                            &ensp; sum_of_values = Add.add(value, sum_of_values) <br>
+                                        return sum_of_values <br>
+                                    </span>
+                    </li>
+                    <li>
+                        Subtraction - <span class="new-code"> <br>
+                                            difference_of_values = 0.0 <br>
+                                            for value in self.values: <br>
+                                              &ensp;  difference_of_values = Sub.subtract(difference_of_values, value) <br>
+                                            return difference_of_values <br>
+                                    </span>
+                    </li>
+                </ul>
+
+                As we can see the implementation is a little bit different but the method signature is the same for
+                both of these methods.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Abstraction</h1>
+            <p>
+                The Calculation class is an abstract class that provides the blueprint for each of it's subclasses. In this
+                case it provides the constructor and create methods for other classes to use to create the instance variable
+                <span class="new-code">values</span>.
+            </p>
+
+            <hr class="dashed">
+            <h1 class="font-md">Inheritance</h1>
+            <p>
+                Each of the classes Addition, Subtraction, Multiplication, and Division in this file are subclasses
+                on Calculation this can be seen in the method declaration: <span class="new-code">class Addition(Calculation):</span>
+                This means that each one of these subclasses inherits data and methods from the parent class Calculation.
+                This is clear because each of these subclasses has access to the instance variable <span class="new-code">values</span>
+            </p>
+        </div>
+
+
+
+        <div class="side-content">
+            <div>
+                <img class="sideimg" src="../static/images/page-images/calc-side.png" alt=""/>
+                <br>
+
+            </div>
+
+            <h2>Calculator Links</h2>
+            <ul class="list-group">
+                <li class="list-group-item"><a href="https://github.com/coltonj14/docker-flask-project1/tree/project-2-calculator">Github</a></li>
+            </ul>
+
+        </div>
+
+    </div>
+{% endblock %}
