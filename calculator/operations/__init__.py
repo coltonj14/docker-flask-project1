@@ -17,7 +17,7 @@ class Subtraction:
 
     @staticmethod
     def subtract(value_1, value_2):
-        """ This is the add method"""
+        """ This is the subtract method"""
         return value_1 - value_2
 
 
