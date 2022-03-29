@@ -66,7 +66,11 @@ class Division(Calculation):
     """division calculation object"""
 
     def get_result(self):
-        result = 1.0
+
+        result = self.values[0]
+        divisor = 0
         for value in self.values:
-            result = Div.divide(value, result)
-        return result
+            if value == result:
+                continue
+            divisor = Div.divide(result, value)
+        return divisor

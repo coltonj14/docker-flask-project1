@@ -35,5 +35,8 @@ class Division:
     @staticmethod
     def divide(value_1, value_2):
         """This is the division method"""
-        #potentially check for divide by 0 here
-        return value_1 / value_2
+        #check for divide by 0 here
+        if value_2 == 0:
+            raise ValueError('Cannot divide by 0')
+        else:
+            return value_1 / value_2

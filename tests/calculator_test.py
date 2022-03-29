@@ -6,7 +6,7 @@ from calculator import Calculator
 
 def tuple_list():
     """Arranging Data for AAA Testing"""
-    return 1.0, 2
+    return 6.0, 3
 
 
 def test_calculator_add_method():
@@ -17,14 +17,18 @@ def test_calculator_add_method():
     result = Calculator.add(tuple_list())
 
     ## Assertion for AAA testing
-    assert result == 3
+    assert result == 9
 
 
 def test_calculator_subtract_method():
     """Testing the Calculator Subtract"""
-    assert Calculator.subtract(tuple_list()) == -3
+    assert Calculator.subtract(tuple_list()) == -9
 
 
 def test_calculator_multiply_method():
     """Testing the Calculator Subtract"""
-    assert Calculator.multiply(tuple_list()) == 2
+    assert Calculator.multiply(tuple_list()) == 18
+
+def test_calculator_divide_method():
+    """Testing the Calculator Divide"""
+    assert Calculator.divide(tuple_list()) == 2
